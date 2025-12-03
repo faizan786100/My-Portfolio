@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
 import Header from "./components/header/header";
-// import Hero from "./components/hero/hero";
+import Hero from "./components/hero/hero";
 // import Footer from "./components/footer/footer";
 // import About from "./components/about/about";
 // import Services from "./components/services/services";
@@ -107,6 +107,7 @@ function App() {
             </Routes>
           </Router> */}
           <Header />
+          <Hero />
         </>
       )}
     </>
