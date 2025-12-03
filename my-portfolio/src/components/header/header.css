@@ -1,0 +1,215 @@
+nav {
+    padding: 0 1rem;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+nav.scrolled {
+    background: black;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 90px;
+    width: 120px;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.menu-des {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuBox li {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+}
+
+.menu-items {
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+/* Create the underline effect for a tags */
+.menu-items::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: tomato;
+    transition: width 0.4s ease-out;
+}
+
+/* Expand the underline to match the a tag width on hover */
+.menu-items:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Menu Positioning Styles */
+.menuBox {
+    position: absolute;
+    padding: 0;
+    right: 10px;
+    display: block;
+    background: linear-gradient(220deg, #2936e9, #7c36ee, #8a08e0);
+    z-index: 1000;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px) scale(0.9);
+    transform-origin: top right;
+    transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        visibility 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        top 0.3s ease,
+        position 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menuBox.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.menuBox .menu {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+.menuBox.active .menu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu a {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s;
+}
+
+.menuBox.active .menu a:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.menuBox.active .menu a:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.menuBox.active .menu a:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.menuBox.active .menu a:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+.menuBox.active .menu a:nth-child(5) {
+    transition-delay: 0.3s;
+}
+
+.menuBox.active .menu a:nth-child(6) {
+    transition-delay: 0.35s;
+}
+
+.menuBox.active .menu a:nth-child(7) {
+    transition-delay: 0.4s;
+}
+
+.menuBox.active .menu a:nth-child(8) {
+    transition-delay: 0.45s;
+}
+
+.menuBox.active .menu a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Menu Icon Animation */
+.menuBox-icon {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.menuBox-icon::before,
+.menuBox-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease, Background-color 0.3s ease;
+}
+
+.menuBox-icon span {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: opacity 0.3s ease, Background-color 0.3s ease;
+}
+.menuBox-icon:hover::before,
+.menuBox-icon:hover::after,
+.menuBox-icon:hover span {
+    background-color: var(--accent);
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.7);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease, Background-color 0.3s ease;
+}
+
+.menuBox-icon::before {
+    transform: translateY(-8px);
+}
+
+.menuBox-icon::after {
+    transform: translateY(8px);
+}
+
+.menuBox-icon.active {
+    transform: rotate(180deg);
+}
+
+.menuBox-icon.active::before {
+    transform: rotate(45deg);
+}
+
+.menuBox-icon.active::after {
+    transform: rotate(-45deg);
+}
+
+.menuBox-icon.active span {
+    opacity: 0;
+}
+

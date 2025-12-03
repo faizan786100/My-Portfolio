@@ -1,31 +1,31 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
 import Header from "./components/header/header";
-import Hero from "./components/hero/hero";
-import Footer from "./components/footer/footer";
-import About from "./components/about/about";
-import Services from "./components/services/services";
-import Testimonials from "./components/testimonials/testimonials";
-import Blogs from "./components/blogs/blog";
-import Contact from "./components/contact/contact";
-import Projects from "./components/projects/projects";
-import Skills from "./components/skills/skills";
-import ProjectPage from "./pages/projects/projectsPage";
-import ProjectDetail from "./pages/project-detail/projectDetail";
-import BlogDetail from "./pages/blog-detail/blogDetail";
-import Blogpage from "./pages/blog/blogPage"
-import Contactpage from "./pages/contact/contact"
-import ScrollToTop from "./components/ScrollToTop";
-import BackToTop from "./components/backToTop";
+// import Hero from "./components/hero/hero";
+// import Footer from "./components/footer/footer";
+// import About from "./components/about/about";
+// import Services from "./components/services/services";
+// import Testimonials from "./components/testimonials/testimonials";
+// import Blogs from "./components/blogs/blog";
+// import Contact from "./components/contact/contact";
+// import Projects from "./components/projects/projects";
+// import Skills from "./components/skills/skills";
+// import ProjectPage from "./pages/projects/projectsPage";
+// import ProjectDetail from "./pages/project-detail/projectDetail";
+// import BlogDetail from "./pages/blog-detail/blogDetail";
+// import Blogpage from "./pages/blog/blogPage"
+// import Contactpage from "./pages/contact/contact"
+// import ScrollToTop from "./components/ScrollToTop";
+// import BackToTop from "./components/backToTop";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,7 +51,7 @@ function App() {
         </div>
       ) : (
         <>
-          <Router>
+          {/* <Router>
             <ScrollToTop />
             <BackToTop />
             <Routes>
@@ -105,7 +105,8 @@ function App() {
                 </>
               } />
             </Routes>
-          </Router>
+          </Router> */}
+          <Header />
         </>
       )}
     </>
