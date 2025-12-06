@@ -50,6 +50,10 @@
     transition: border 0.3s, box-shadow 0.3s;
 }
 
+.form-group textarea {
+    height: 7rem;
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--primary);
