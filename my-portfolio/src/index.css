@@ -312,6 +312,25 @@ section {
     }
 }
 
+/* Pulse animation for scroll buttons */
+@keyframes buttonPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(138, 8, 224, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(138, 8, 224, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(138, 8, 224, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
 @keyframes appear {
     from {
         opacity: 0;
@@ -337,20 +356,7 @@ section {
 }
 
 
-/* Pulse animation for scroll buttons */
-@keyframes buttonPulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(138, 8, 224, 0.7);
-    }
 
-    70% {
-        box-shadow: 0 0 0 10px rgba(138, 8, 224, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(138, 8, 224, 0);
-    }
-}
 
 /* Service Cards Animation */
 /* This animation is also used in projects.css file */

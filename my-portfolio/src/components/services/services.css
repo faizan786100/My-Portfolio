@@ -1,0 +1,212 @@
+/* =========== services section =========== */
+
+.services-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(138, 8, 224, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(138, 8, 224, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(138, 8, 224, 0);
+    }
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 0 500px;
+    /* Fixed width for consistent sizing */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(138, 8, 224, 0.2);
+    border-color: rgba(138, 8, 224, 0.3);
+}
+
+.service-card .card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2936e9, #8a08e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem 0;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-icon {
+    transform: scale(1.1) translateY(-5px);
+}
+
+.service-card .card-icon i {
+    font-size: 32px;
+    color: #fff;
+}
+
+.service-card .content {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.service-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #2936e9, #8a08e0);
+}
+
+.service-card p {
+    height: 5rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.service-features li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.service-features li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8a08e0;
+    font-size: 1.2rem;
+}
+
+.service-cta {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #2936e9, #8a08e0);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(138, 8, 224, 0.3);
+}
+
+.service-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(138, 8, 224, 0.5);
+}
+
+.services-cta {
+    margin-top: 70px;
+    text-align: center;
+    padding: 50px 30px;
+    background: linear-gradient(135deg, rgba(41, 54, 233, 0.1), rgba(138, 8, 224, 0.2));
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.services-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.services-cta p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.service-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+@media (max-width: 992) {
+    .service-card {
+
+    }
+}
+
+@media (max-width: 576px) {
+    .service-card {
+        width: 100%;
+    }
+
+    .scroll-left,
+    .scroll-right {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .scroll-left {
+        left: 5px;
+    }
+
+    .scroll-right {
+        right: 5px;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 375px) {
+    .scroll-left,
+    .scroll-right {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .scroll-left {
+        left: 2px;
+    }
+
+    .scroll-right {
+        right: 2px;
+    }
+}
