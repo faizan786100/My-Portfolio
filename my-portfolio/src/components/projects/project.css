@@ -127,6 +127,7 @@
 .portfolio-desc {
     transform: translateY(20px);
     transition: transform 0.5s;
+    margin-bottom: 10px;
     transition-delay: 0.1s;
 }
 

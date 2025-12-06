@@ -6,7 +6,7 @@ import secondMain from "../../Images/second_project-imgs/main_img.jpg"
 import thirdMain from "../../Images/third_project-imgs/main_img.webp"
 import fourthMain from "../../Images/fourth_project-imgs/main_img.png"
 import fifthMain from "../../Images/fifth_project-imgs/main_img.jpg"
-import sixthMain from "../../Images/sixth_project-imgs/main_img"
+import sixthMain from "../../Images/sixth_project-imgs/main_img.webp"
 
 
 const projectsData = [

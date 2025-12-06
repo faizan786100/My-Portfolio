@@ -5,7 +5,7 @@ import secondMain from "../../Images/second_project-imgs/main_img.jpg"
 import thirdMain from "../../Images/third_project-imgs/main_img.webp"
 import fourthMain from "../../Images/fourth_project-imgs/main_img.png"
 import fifthMain from "../../Images/fifth_project-imgs/main_img.jpg"
-import sixthMain from "../../Images/sixth_project-imgs/main_img"
+import sixthMain from "../../Images/sixth_project-imgs/main_img.webp"
 import client from "../../Images/client_01.png"
 
 const projects = {
@@ -333,7 +333,9 @@ const ProjectDetail = () => {
       {lightboxOpen && (
         <div className="lightbox" onClick={closeLightbox}>
           <div className="lightbox-content">
-            <img src={project.gallery[currentIndex]} alt="Project" />
+            <div className="img_wrapper d-flex justify-content-center align-items-center h-100 w-100">
+              <img src={project.gallery[currentIndex]} alt="Project" />
+            </div>
             <span className="close-lightbox" onClick={closeLightbox}>&times;</span>
             {project.gallery.length > 1 && (
               <>
